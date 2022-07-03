@@ -146,7 +146,6 @@ p {
 }
 
 nav {
-    border: 2px solid red;
     background: var(--clr-white);
     height: 3rem;
     display: grid;
@@ -155,7 +154,6 @@ nav {
 }
 
 .nav-center {
-    border: 2px dashed blue;
     width: 90vw;
     max-width: var(--fixed-width);
     margin: 0 auto;
@@ -167,24 +165,20 @@ nav {
 h4 {
     margin-bottom: 0;
     color: var(--clr-primary-5);
-    border: 2px solid green;
 }
 
 main {
-    border: 2px solid green;
     min-height: calc(100vh - 3rem);
     display: grid;
     place-items: center;
 }
 
 .container {
-    border: 2px dashed red;
     text-align: center;
     margin: 10px;
 }
 
 h2 {
-    border: 2px solid blue;
     background: var(--clr-black);
     color: var(--clr-white);
     padding: 1rem;
