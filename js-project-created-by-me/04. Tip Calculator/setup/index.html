@@ -4,43 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <div class="tip-calculator">
-        <h1 class="heading">Tip Calculator</h1>
-        <hr />
-        <form class="calculator">
-          <label>
-            <p>Total Bill Amount:</p>
-            $ <input type="text" className="billAmount" />
-          </label>
-          <label>
-            <p>Quality of Service:</p>
-            <select className="serviceQuality">
-              <option disabled selected value="0">
-                -- Choose an option --
-              </option>
-              <option value="0.3">Outstanding</option>
-              <option value="0.2">Good</option>
-              <option value="0.15">It was okay</option>
-              <option value="0.1">Bad</option>
-              <option value="0.05">Terrible</option>
-            </select>
-          </label>
-          <label>
-            <p>No. of People Sharing the Bill?</p>
-            <input type="text" className="totalPeople" />
-          </label>
-          <button type="button" className="calculate">Calculate!</button>
-        </form>
-      </div>
+      <h1>Tip Calculator</h1>
+      <form class="calculator">
+        <div>
+          <h3>Bill Amount:</h3>
+          <input type="text" id="billAmount" />
+        </div>
+        <div>
+          <h3>Quality of Service:</h3>
+          <div id="radio">
+            <input
+              type="radio"
+              id="outstanding"
+              value="0.15"
+              name="serviceQuality"
+            />
+            <label for="outstanding">Outstanding</label>
+          </div>
+          <div id="radio">
+            <input
+              type="radio"
+              id="awesome"
+              value="0.1"
+              name="serviceQuality"
+            />
+            <label for="awesome">Awesome</label>
+          </div>
+          <div id="radio">
+            <input type="radio" id="ok" value="0.05" name="serviceQuality" />
+            <label for="ok">Ok</label>
+          </div>
+        </div>
+        <div>
+          <h3>No. of People Sharing the Bill:</h3>
+          <input type="text" id="totalPeople" />
+        </div>
+        <button type="button" id="calculate">Calculate!</button>
+      </form>
       <div class="totalTip">
-        $<span>0.00</span>
-        <small className="each">each</small>
+        <h4><span id="tip">Rs. 0.00</span> <span id="each"> each </span></h4>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

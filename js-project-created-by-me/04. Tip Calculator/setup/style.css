@@ -4,8 +4,8 @@ Variables
 ======
 */
 :root {
-    --primaryLightColor: #d4e6a5;
-    --primaryColor: #476a2e;
+    --primaryLightColor: #e6a5a5;
+    --primaryColor: #6a2e2e;
     --primaryDarkColor: #c02c03;
     --mainWhite: #fff;
     --offWhite: #f7f7f7;
@@ -40,10 +40,13 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--mainBlack);
-    background: var(--mainBackground);
+    background: var(--primaryLightColor);
     line-height: 1.4;
     font-size: 1rem;
     font-weight: 300;
+    display: grid;
+    height: 100vh;
+    place-items: center;
 }
 
 h1,
@@ -53,12 +56,12 @@ h4,
 h5,
 h6 {
     font-family: var(--slantedFont);
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.75rem;
     letter-spacing: var(--mainSpacing);
 }
 
 p {
-    margin-bottom: 1.25rem;
+    /* margin-bottom: 1.25rem; */
 }
 
 ul {
@@ -77,50 +80,104 @@ img {
 
 /* Main CSS */
 .container {
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    width: 95%;
+    max-width: 425px;
+    text-align: center;
+    box-shadow: var(--darkShadow);
+    border-radius: var(--mainBorderRadius);
+    padding: 1.5rem;
+    background: var(--mainWhite);
 }
 
-.tip-calculator {
-    border: 2px dashed blue;
-}
-
-.heading {
-    border: 2px solid green;
+h1 {
+    /* border: 2px dashed green; */
+    margin-bottom: 2rem;
 }
 
 .calculator {
-    border: 2px solid red;
+    /* border: 2px dashed blue; */
 }
 
-label {
-    border: 2px solid green;
-    display: block;
+.calculator div {
+    /* border: 2px dashed green; */
+    margin-bottom: 2rem;
 }
 
-p {
-    border: 2px dashed red;
+.radioContainer {
+    margin-bottom: 0;
+}
+
+#radio {
+    margin-bottom: 0;
+}
+
+h3 {
+    /* border: 2px dashed red; */
 }
 
 input {
-    border: 2px dashed red;
+    /* border: 2px solid blue; */
+    /* width: 100%; */
+    border: none;
+    border-color: transparent;
+    background: var(--mainGrey);
+    border-radius: var(--mainBorderRadius);
+    padding: 0.5rem;
+    font-size: 1.2rem;
 }
 
-label select {
-    border: 2px dashed red;
+#serviceQuality {
+    margin-bottom: 0.75rem;
+}
+
+label {
+    /* border: 2px solid red; */
+    display: inline-block;
+    letter-spacing: var(--mainSpacing);
+    margin-left: 0.5rem;
 }
 
 button {
-    border: 2px solid green;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    padding: 0.45rem 0.8rem;
+    display: inline-block;
+    transition: var(--mainTransition);
+    cursor: pointer;
+    font-size: 0.8rem;
+    background: transparent;
+    border-radius: var(--mainBorderRadius);
+    margin-bottom: 1.5rem;
+}
+
+button:hover {
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+}
+
+button:active {
+    background: transparent;
+    color: var(--primaryColor);
 }
 
 .totalTip {
-    border: 2px dashed green;
+    /* border: 2px dashed green; */
 }
 
-.totalTip span {
-    border: 2px solid blue;
+h4 {
+    /* border: 2px solid red; */
 }
 
-.totalTip small {
-    border: 2px solid red;
+@media screen and (max-width: 375px) {
+    body {
+        display: block;
+    }
+
+    .container {
+        width: 95%;
+        margin: 0.5rem auto;
+    }
 }
